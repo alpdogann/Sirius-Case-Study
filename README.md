@@ -9,7 +9,7 @@ This program allows users to generate, process, and optionally save raw and proc
 
 You can view the documentation for this project at the following URL:
 
-[View Documentation](https://alpdogann.github.io/Sirius-Case-Study/)
+[Documentation](https://alpdogann.github.io/Sirius-Case-Study/)
 
 ## Instructions for Compiling and Running the Program
 
