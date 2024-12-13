@@ -2,6 +2,7 @@
 #include "Sensor.h"
 #include "DataProcessor.h"
 #include "UserInputHandler.h"
+#include <iomanip>
 
 int main()
 {
@@ -25,20 +26,40 @@ int main()
 	dp->calculateAverages();		// Calculate the average of the raw and processed data
 	dp->calculateSubsetAverages();  // Calculate the average for each subset of data (for both raw and processed data)
 
-	// Output statistics for the raw data (e.g., number of data points, min, max, average)
-	std::cout << "\nNumber of data points: " << dp->getRawData().size() << "\n";
-	std::cout << "Minimum value: " << dp->getRawDataMin() << "\n";
-	std::cout << "Maximum value: " << dp->getRawDataMax() << "\n";
-	std::cout << "Average value: " << dp->getRawAverage() << "\n";
+	// Output statistics for both raw and processed data in a table format
+	std::cout << "\n------------------------- Data Statistics -------------------------\n";
+	std::cout << std::setw(25) << std::left << "Statistic"
+		<< std::setw(15) << std::left << "Raw Data"
+		<< std::setw(15) << std::left << "Processed Data"
+		<< "\n";
+	std::cout << "---------------------------------------------------------------\n";
 
-	// Output statistics for the processed data (e.g., number of data points, min, max, average)
-	std::cout << "\nNumber of data points: " << dp->getProcessedData().size() << "\n";
-	std::cout << "Minimum value: " << dp->getProcessedDataMin() << "\n";
-	std::cout << "Maximum value: " << dp->getProcessedDataMax() << "\n";
-	std::cout << "Average value: " << dp->getProcessedAverage() << "\n";
+	// Number of data points
+	std::cout << std::setw(25) << std::left << "Number of data points"
+		<< std::setw(15) << dp->getRawData().size()
+		<< std::setw(15) << dp->getProcessedData().size()
+		<< "\n";
 
-	// Ask the user if they want to save the generated raw and processed data to a file
-	inputHandler->saveDataToFile(dp->getRawData(), dp->getProcessedData());
+	// Minimum value
+	std::cout << std::setw(25) << std::left << "Minimum value"
+		<< std::setw(15) << dp->getRawDataMin()
+		<< std::setw(15) << dp->getProcessedDataMin()
+		<< "\n";
+
+	// Maximum value
+	std::cout << std::setw(25) << std::left << "Maximum value"
+		<< std::setw(15) << dp->getRawDataMax()
+		<< std::setw(15) << dp->getProcessedDataMax()
+		<< "\n";
+
+	// Average value
+	std::cout << std::setw(25) << std::left << "Average value"
+		<< std::setw(15) << dp->getRawAverage()
+		<< std::setw(15) << dp->getProcessedAverage()
+		<< "\n";
+
+	std::cout << "-----------------------------------------------------------------\n";
+
 
     std::cin.get();
 }
