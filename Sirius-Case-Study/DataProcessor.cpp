@@ -2,7 +2,6 @@
 #include <algorithm>
 #include <numeric>
 #include <iostream>
-#include <vector>
 
 DataProcessor::DataProcessor(int movingAverageWindowSize, int subsetSize)
 	:m_windowSize(movingAverageWindowSize),  // Set the moving average window size
