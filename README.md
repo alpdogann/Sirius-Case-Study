@@ -5,6 +5,12 @@ Sirius Design Lab Case Study
 
 This program allows users to generate, process, and optionally save raw and processed data. The user can specify the number of data points, data generation timing, data type (Linear, Sinusoidal, or Random), range, moving average window size, and more. The program then performs the necessary processing and provides the option to save the raw and processed data to a text file.
 
+## Documentation
+
+You can view the documentation for this project at the following URL:
+
+[View Documentation](https://alpdogann.github.io/Sirius-Case-Study/)
+
 ## Instructions for Compiling and Running the Program
 
 ### Prerequisites:
