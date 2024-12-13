@@ -1,0 +1,317 @@
+\doxysection{Data\+Processor Class Reference}
+\hypertarget{class_data_processor}{}\label{class_data_processor}\index{DataProcessor@{DataProcessor}}
+
+
+{\ttfamily \#include $<$Data\+Processor.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_data_processor_a8cd4f9a0c4e85f3e0e3c9d298334bafd}{Data\+Processor}} (int moving\+Average\+Window\+Size=3, int subset\+Size=3)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_data_processor}{Data\+Processor} object for processing sensor data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_data_processor_af19b93cdf4cb5bf1f961f1d4b47f4daa}{\texorpdfstring{$\sim$}{\string~}\+Data\+Processor}} ()
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_data_processor_a9861505c77cd4c6fd5a58f83de6dfd27}{get\+Raw\+Data}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the raw data processed by the \doxylink{class_data_processor}{Data\+Processor}. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_data_processor_a4160c2fe4bf6671a03ffb2d22b05003a}{get\+Processed\+Data}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the processed data after applying the moving average filter. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_data_processor_a20e378cac0293cbb6a7d1f89ed67f337}{get\+Raw\+Subset\+Average\+Data}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the raw subset average data. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_data_processor_a5a40f896cae09dcb115a0d3896a8c334}{get\+Processed\+Subset\+Average\+Data}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the processed subset average data. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_data_processor_a1449839232b1c439d858b3d9a8d87db6}{calculate\+Subset\+Average}} (const std\+::vector$<$ double $>$ \&vec) const
+\begin{DoxyCompactList}\small\item\em Calculates the subset averages of the given data vector. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_data_processor_aa460da4475d9e40d9f3848a045fdd236}{get\+Raw\+Data\+Min}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the minimum value from the raw data. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_data_processor_aa52cf5d948b0ba21331eb282fb8e88c5}{get\+Raw\+Data\+Max}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the maximum value from the raw data. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_data_processor_a6b6cc9dfe61552f9927f37fb2547c70e}{get\+Processed\+Data\+Min}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the minimum value from the processed data. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_data_processor_aeb408b130cb836c58a7e3d299367cb4e}{get\+Processed\+Data\+Max}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the maximum value from the processed data. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_data_processor_ac4a03af739bd7da88b76e1e1d177bf38}{get\+Raw\+Average}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the average of the raw data. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_data_processor_ab5f0c8aaf61f753d98e3ae681db5a9ae}{get\+Processed\+Average}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the average of the processed data. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_data_processor_a9277238eccebec12433b58841bc8f19b}{calculate\+Average}} (const std\+::vector$<$ double $>$ \&vec)
+\begin{DoxyCompactList}\small\item\em Calculates the average of a given data vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_data_processor_af87d3a247b88de5866419c89d533a9c7}{set\+Raw\+Data}} (const std\+::vector$<$ double $>$ \&vec)
+\begin{DoxyCompactList}\small\item\em Sets the raw data for the \doxylink{class_data_processor}{Data\+Processor}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_data_processor_a1642af54e5611bcd6ab539cc455c1dc5}{calculate\+Averages}} ()
+\begin{DoxyCompactList}\small\item\em Calculates the averages of the raw and processed data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_data_processor_adc6a06411822b10f7f446e936c866292}{calculate\+Subset\+Averages}} ()
+\begin{DoxyCompactList}\small\item\em Calculates the subset averages for both raw and processed data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_data_processor_a6529876c26fd2bc6ab8591a68fa6b5e4}{moving\+Average\+Filter}} ()
+\begin{DoxyCompactList}\small\item\em Applies a moving average filter to the raw data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_data_processor_a8cd4f9a0c4e85f3e0e3c9d298334bafd}\index{DataProcessor@{DataProcessor}!DataProcessor@{DataProcessor}}
+\index{DataProcessor@{DataProcessor}!DataProcessor@{DataProcessor}}
+\doxysubsubsection{\texorpdfstring{DataProcessor()}{DataProcessor()}}
+{\footnotesize\ttfamily \label{class_data_processor_a8cd4f9a0c4e85f3e0e3c9d298334bafd} 
+Data\+Processor\+::\+Data\+Processor (\begin{DoxyParamCaption}\item[{int}]{moving\+Average\+Window\+Size}{ = {\ttfamily 3}, }\item[{int}]{subset\+Size}{ = {\ttfamily 3}}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_data_processor}{Data\+Processor} object for processing sensor data. 
+
+Initializes the \doxylink{class_data_processor}{Data\+Processor} with specified values for the moving average window size and subset size.
+
+
+\begin{DoxyParams}{Parameters}
+{\em moving\+Average\+Window\+Size} & The size of the moving average window (default\+: 3). \\
+\hline
+{\em subset\+Size} & The number of elements in each subset for averaging (default\+: 3). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_data_processor_af19b93cdf4cb5bf1f961f1d4b47f4daa}\index{DataProcessor@{DataProcessor}!````~DataProcessor@{\texorpdfstring{$\sim$}{\string~}DataProcessor}}
+\index{````~DataProcessor@{\texorpdfstring{$\sim$}{\string~}DataProcessor}!DataProcessor@{DataProcessor}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}DataProcessor()}{\string~DataProcessor()}}
+{\footnotesize\ttfamily \label{class_data_processor_af19b93cdf4cb5bf1f961f1d4b47f4daa} 
+Data\+Processor\+::\texorpdfstring{$\sim$}{\string~}\+Data\+Processor (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_data_processor_a9277238eccebec12433b58841bc8f19b}\index{DataProcessor@{DataProcessor}!calculateAverage@{calculateAverage}}
+\index{calculateAverage@{calculateAverage}!DataProcessor@{DataProcessor}}
+\doxysubsubsection{\texorpdfstring{calculateAverage()}{calculateAverage()}}
+{\footnotesize\ttfamily \label{class_data_processor_a9277238eccebec12433b58841bc8f19b} 
+double Data\+Processor\+::calculate\+Average (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{vec}{}\end{DoxyParamCaption})}
+
+
+
+Calculates the average of a given data vector. 
+
+This function computes the average by summing all elements of the input vector and dividing by the number of elements. If the vector is empty, it does not perform the calculation and returns nothing.
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & The vector of data for which the average is to be calculated. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The average value of the elements in the vector, or 0.\+0 if the vector is empty. 
+\end{DoxyReturn}
+\Hypertarget{class_data_processor_a1642af54e5611bcd6ab539cc455c1dc5}\index{DataProcessor@{DataProcessor}!calculateAverages@{calculateAverages}}
+\index{calculateAverages@{calculateAverages}!DataProcessor@{DataProcessor}}
+\doxysubsubsection{\texorpdfstring{calculateAverages()}{calculateAverages()}}
+{\footnotesize\ttfamily \label{class_data_processor_a1642af54e5611bcd6ab539cc455c1dc5} 
+void Data\+Processor\+::calculate\+Averages (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Calculates the averages of the raw and processed data. 
+
+This function calls the helper function {\ttfamily calculate\+Average} twice\+: once for {\ttfamily m\+\_\+raw\+Data} and once for {\ttfamily m\+\_\+processed\+Data}. It stores the results in {\ttfamily m\+\_\+raw\+Average} and {\ttfamily m\+\_\+processed\+Average}, respectively. If the data vectors are empty, their averages remain unchanged. \Hypertarget{class_data_processor_a1449839232b1c439d858b3d9a8d87db6}\index{DataProcessor@{DataProcessor}!calculateSubsetAverage@{calculateSubsetAverage}}
+\index{calculateSubsetAverage@{calculateSubsetAverage}!DataProcessor@{DataProcessor}}
+\doxysubsubsection{\texorpdfstring{calculateSubsetAverage()}{calculateSubsetAverage()}}
+{\footnotesize\ttfamily \label{class_data_processor_a1449839232b1c439d858b3d9a8d87db6} 
+std\+::vector$<$ double $>$ Data\+Processor\+::calculate\+Subset\+Average (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{vec}{}\end{DoxyParamCaption}) const}
+
+
+
+Calculates the subset averages of the given data vector. 
+
+This function divides the input vector into subsets of a fixed size ({\ttfamily m\+\_\+subset\+Size}), calculates the average for each subset, and returns a vector of the subset averages. If the number of elements in the input vector is not a multiple of {\ttfamily m\+\_\+subset\+Size}, the function adds padding to the end of the vector to complete the last subset.
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & The vector of data for which the subset averages will be calculated. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector containing the averages of each subset. 
+\end{DoxyReturn}
+\Hypertarget{class_data_processor_adc6a06411822b10f7f446e936c866292}\index{DataProcessor@{DataProcessor}!calculateSubsetAverages@{calculateSubsetAverages}}
+\index{calculateSubsetAverages@{calculateSubsetAverages}!DataProcessor@{DataProcessor}}
+\doxysubsubsection{\texorpdfstring{calculateSubsetAverages()}{calculateSubsetAverages()}}
+{\footnotesize\ttfamily \label{class_data_processor_adc6a06411822b10f7f446e936c866292} 
+void Data\+Processor\+::calculate\+Subset\+Averages (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Calculates the subset averages for both raw and processed data. 
+
+This function calls {\ttfamily calculate\+Subset\+Average} for both the raw data ({\ttfamily m\+\_\+raw\+Data}) and processed data ({\ttfamily m\+\_\+processed\+Data}) and stores the resulting subset averages in {\ttfamily m\+\_\+raw\+Subset\+Average\+Data} and {\ttfamily m\+\_\+processed\+Subset\+Average\+Data}, respectively. \Hypertarget{class_data_processor_ab5f0c8aaf61f753d98e3ae681db5a9ae}\index{DataProcessor@{DataProcessor}!getProcessedAverage@{getProcessedAverage}}
+\index{getProcessedAverage@{getProcessedAverage}!DataProcessor@{DataProcessor}}
+\doxysubsubsection{\texorpdfstring{getProcessedAverage()}{getProcessedAverage()}}
+{\footnotesize\ttfamily \label{class_data_processor_ab5f0c8aaf61f753d98e3ae681db5a9ae} 
+double Data\+Processor\+::get\+Processed\+Average (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the average of the processed data. 
+
+This function returns the average value of the processed data stored in {\ttfamily m\+\_\+processed\+Average}. The processed data is typically the result after applying any data filtering or transformation.
+
+\begin{DoxyReturn}{Returns}
+The average value of the processed data. 
+\end{DoxyReturn}
+\Hypertarget{class_data_processor_a4160c2fe4bf6671a03ffb2d22b05003a}\index{DataProcessor@{DataProcessor}!getProcessedData@{getProcessedData}}
+\index{getProcessedData@{getProcessedData}!DataProcessor@{DataProcessor}}
+\doxysubsubsection{\texorpdfstring{getProcessedData()}{getProcessedData()}}
+{\footnotesize\ttfamily \label{class_data_processor_a4160c2fe4bf6671a03ffb2d22b05003a} 
+std\+::vector$<$ double $>$ Data\+Processor\+::get\+Processed\+Data (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the processed data after applying the moving average filter. 
+
+\begin{DoxyReturn}{Returns}
+A copy to the vector of processed data. 
+\end{DoxyReturn}
+\Hypertarget{class_data_processor_aeb408b130cb836c58a7e3d299367cb4e}\index{DataProcessor@{DataProcessor}!getProcessedDataMax@{getProcessedDataMax}}
+\index{getProcessedDataMax@{getProcessedDataMax}!DataProcessor@{DataProcessor}}
+\doxysubsubsection{\texorpdfstring{getProcessedDataMax()}{getProcessedDataMax()}}
+{\footnotesize\ttfamily \label{class_data_processor_aeb408b130cb836c58a7e3d299367cb4e} 
+double Data\+Processor\+::get\+Processed\+Data\+Max (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the maximum value from the processed data. 
+
+This function calculates and returns the largest value in the processed data vector, {\ttfamily m\+\_\+processed\+Data}, using the {\ttfamily std\+::max\+\_\+element} algorithm.
+
+\begin{DoxyReturn}{Returns}
+The maximum value in the processed data vector. 
+\end{DoxyReturn}
+\Hypertarget{class_data_processor_a6b6cc9dfe61552f9927f37fb2547c70e}\index{DataProcessor@{DataProcessor}!getProcessedDataMin@{getProcessedDataMin}}
+\index{getProcessedDataMin@{getProcessedDataMin}!DataProcessor@{DataProcessor}}
+\doxysubsubsection{\texorpdfstring{getProcessedDataMin()}{getProcessedDataMin()}}
+{\footnotesize\ttfamily \label{class_data_processor_a6b6cc9dfe61552f9927f37fb2547c70e} 
+double Data\+Processor\+::get\+Processed\+Data\+Min (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the minimum value from the processed data. 
+
+This function calculates and returns the smallest value in the processed data vector, {\ttfamily m\+\_\+processed\+Data}, using the {\ttfamily std\+::min\+\_\+element} algorithm.
+
+\begin{DoxyReturn}{Returns}
+The minimum value in the processed data vector. 
+\end{DoxyReturn}
+\Hypertarget{class_data_processor_a5a40f896cae09dcb115a0d3896a8c334}\index{DataProcessor@{DataProcessor}!getProcessedSubsetAverageData@{getProcessedSubsetAverageData}}
+\index{getProcessedSubsetAverageData@{getProcessedSubsetAverageData}!DataProcessor@{DataProcessor}}
+\doxysubsubsection{\texorpdfstring{getProcessedSubsetAverageData()}{getProcessedSubsetAverageData()}}
+{\footnotesize\ttfamily \label{class_data_processor_a5a40f896cae09dcb115a0d3896a8c334} 
+std\+::vector$<$ double $>$ Data\+Processor\+::get\+Processed\+Subset\+Average\+Data (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the processed subset average data. 
+
+\begin{DoxyReturn}{Returns}
+A copy to the vector of processed subset averages. 
+\end{DoxyReturn}
+\Hypertarget{class_data_processor_ac4a03af739bd7da88b76e1e1d177bf38}\index{DataProcessor@{DataProcessor}!getRawAverage@{getRawAverage}}
+\index{getRawAverage@{getRawAverage}!DataProcessor@{DataProcessor}}
+\doxysubsubsection{\texorpdfstring{getRawAverage()}{getRawAverage()}}
+{\footnotesize\ttfamily \label{class_data_processor_ac4a03af739bd7da88b76e1e1d177bf38} 
+double Data\+Processor\+::get\+Raw\+Average (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the average of the raw data. 
+
+This function returns the average value of the raw data stored in {\ttfamily m\+\_\+raw\+Average}.
+
+\begin{DoxyReturn}{Returns}
+The average value of the raw data. 
+\end{DoxyReturn}
+\Hypertarget{class_data_processor_a9861505c77cd4c6fd5a58f83de6dfd27}\index{DataProcessor@{DataProcessor}!getRawData@{getRawData}}
+\index{getRawData@{getRawData}!DataProcessor@{DataProcessor}}
+\doxysubsubsection{\texorpdfstring{getRawData()}{getRawData()}}
+{\footnotesize\ttfamily \label{class_data_processor_a9861505c77cd4c6fd5a58f83de6dfd27} 
+std\+::vector$<$ double $>$ Data\+Processor\+::get\+Raw\+Data (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the raw data processed by the \doxylink{class_data_processor}{Data\+Processor}. 
+
+\begin{DoxyReturn}{Returns}
+A copy to the vector of raw data. 
+\end{DoxyReturn}
+\Hypertarget{class_data_processor_aa52cf5d948b0ba21331eb282fb8e88c5}\index{DataProcessor@{DataProcessor}!getRawDataMax@{getRawDataMax}}
+\index{getRawDataMax@{getRawDataMax}!DataProcessor@{DataProcessor}}
+\doxysubsubsection{\texorpdfstring{getRawDataMax()}{getRawDataMax()}}
+{\footnotesize\ttfamily \label{class_data_processor_aa52cf5d948b0ba21331eb282fb8e88c5} 
+double Data\+Processor\+::get\+Raw\+Data\+Max (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the maximum value from the raw data. 
+
+This function calculates and returns the largest value in the raw data vector, {\ttfamily m\+\_\+raw\+Data}, using the {\ttfamily std\+::max\+\_\+element} algorithm.
+
+\begin{DoxyReturn}{Returns}
+The maximum value in the raw data vector. 
+\end{DoxyReturn}
+\Hypertarget{class_data_processor_aa460da4475d9e40d9f3848a045fdd236}\index{DataProcessor@{DataProcessor}!getRawDataMin@{getRawDataMin}}
+\index{getRawDataMin@{getRawDataMin}!DataProcessor@{DataProcessor}}
+\doxysubsubsection{\texorpdfstring{getRawDataMin()}{getRawDataMin()}}
+{\footnotesize\ttfamily \label{class_data_processor_aa460da4475d9e40d9f3848a045fdd236} 
+double Data\+Processor\+::get\+Raw\+Data\+Min (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the minimum value from the raw data. 
+
+This function calculates and returns the smallest value in the raw data vector, {\ttfamily m\+\_\+raw\+Data}, using the {\ttfamily std\+::min\+\_\+element} algorithm.
+
+\begin{DoxyReturn}{Returns}
+The minimum value in the raw data vector. 
+\end{DoxyReturn}
+\Hypertarget{class_data_processor_a20e378cac0293cbb6a7d1f89ed67f337}\index{DataProcessor@{DataProcessor}!getRawSubsetAverageData@{getRawSubsetAverageData}}
+\index{getRawSubsetAverageData@{getRawSubsetAverageData}!DataProcessor@{DataProcessor}}
+\doxysubsubsection{\texorpdfstring{getRawSubsetAverageData()}{getRawSubsetAverageData()}}
+{\footnotesize\ttfamily \label{class_data_processor_a20e378cac0293cbb6a7d1f89ed67f337} 
+std\+::vector$<$ double $>$ Data\+Processor\+::get\+Raw\+Subset\+Average\+Data (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the raw subset average data. 
+
+\begin{DoxyReturn}{Returns}
+A copy to the vector of raw subset averages. 
+\end{DoxyReturn}
+\Hypertarget{class_data_processor_a6529876c26fd2bc6ab8591a68fa6b5e4}\index{DataProcessor@{DataProcessor}!movingAverageFilter@{movingAverageFilter}}
+\index{movingAverageFilter@{movingAverageFilter}!DataProcessor@{DataProcessor}}
+\doxysubsubsection{\texorpdfstring{movingAverageFilter()}{movingAverageFilter()}}
+{\footnotesize\ttfamily \label{class_data_processor_a6529876c26fd2bc6ab8591a68fa6b5e4} 
+void Data\+Processor\+::moving\+Average\+Filter (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Applies a moving average filter to the raw data. 
+
+This function performs a simple moving average filtering operation on the raw data ({\ttfamily m\+\_\+raw\+Data}), smoothing the data by averaging each point with its neighboring points. The window size of the filter is defined by {\ttfamily m\+\_\+window\+Size}. The filtered result is stored in {\ttfamily m\+\_\+processed\+Data}.
+
+The algorithm works as follows\+:
+\begin{DoxyEnumerate}
+\item The raw data is padded with the first and last values to handle edge cases.
+\item For each data point, the function calculates the sum of the current point and its neighbors within the window size, then scales the sum to calculate the average.
+\item The averages are stored in the {\ttfamily m\+\_\+processed\+Data} vector. 
+\end{DoxyEnumerate}\Hypertarget{class_data_processor_af87d3a247b88de5866419c89d533a9c7}\index{DataProcessor@{DataProcessor}!setRawData@{setRawData}}
+\index{setRawData@{setRawData}!DataProcessor@{DataProcessor}}
+\doxysubsubsection{\texorpdfstring{setRawData()}{setRawData()}}
+{\footnotesize\ttfamily \label{class_data_processor_af87d3a247b88de5866419c89d533a9c7} 
+void Data\+Processor\+::set\+Raw\+Data (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{vec}{}\end{DoxyParamCaption})}
+
+
+
+Sets the raw data for the \doxylink{class_data_processor}{Data\+Processor}. 
+
+This function updates the internal {\ttfamily m\+\_\+raw\+Data} vector with the provided data vector {\ttfamily vec}. It replaces the current raw data with the new data and recalculates any necessary values, such as averages or processed data.
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & A vector containing the new raw data to be processed. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Sirius-\/\+Case-\/\+Study/\mbox{\hyperlink{_data_processor_8h}{Data\+Processor.\+h}}\end{DoxyCompactItemize}

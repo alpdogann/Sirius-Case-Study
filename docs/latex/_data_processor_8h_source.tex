@@ -1,0 +1,44 @@
+\doxysection{Data\+Processor.\+h}
+\hypertarget{_data_processor_8h_source}{}\label{_data_processor_8h_source}\index{Sirius-\/Case-\/Study/DataProcessor.h@{Sirius-\/Case-\/Study/DataProcessor.h}}
+\mbox{\hyperlink{_data_processor_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_data_processor}{DataProcessor}}}
+\DoxyCodeLine{00005\ \{}
+\DoxyCodeLine{00006\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{class_data_processor_a8cd4f9a0c4e85f3e0e3c9d298334bafd}{DataProcessor}}(\textcolor{keywordtype}{int}\ movingAverageWindowSize\ =\ 3,\ \textcolor{keywordtype}{int}\ subsetSize\ =\ 3);}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{class_data_processor_af19b93cdf4cb5bf1f961f1d4b47f4daa}{\string~DataProcessor}}();}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00023\ \ \ \ \ std::vector<double>\ \mbox{\hyperlink{class_data_processor_a9861505c77cd4c6fd5a58f83de6dfd27}{getRawData}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00029\ \ \ \ \ std::vector<double>\ \mbox{\hyperlink{class_data_processor_a4160c2fe4bf6671a03ffb2d22b05003a}{getProcessedData}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00035\ \ \ \ \ std::vector<double>\ \mbox{\hyperlink{class_data_processor_a20e378cac0293cbb6a7d1f89ed67f337}{getRawSubsetAverageData}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00041\ \ \ \ \ std::vector<double>\ \mbox{\hyperlink{class_data_processor_a5a40f896cae09dcb115a0d3896a8c334}{getProcessedSubsetAverageData}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00053\ \ \ \ \ std::vector<double>\ \mbox{\hyperlink{class_data_processor_a1449839232b1c439d858b3d9a8d87db6}{calculateSubsetAverage}}(\textcolor{keyword}{const}\ std::vector<double>\&\ vec)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_data_processor_aa460da4475d9e40d9f3848a045fdd236}{getRawDataMin}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_data_processor_aa52cf5d948b0ba21331eb282fb8e88c5}{getRawDataMax}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_data_processor_a6b6cc9dfe61552f9927f37fb2547c70e}{getProcessedDataMin}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_data_processor_aeb408b130cb836c58a7e3d299367cb4e}{getProcessedDataMax}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_data_processor_ac4a03af739bd7da88b76e1e1d177bf38}{getRawAverage}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_data_processor_ab5f0c8aaf61f753d98e3ae681db5a9ae}{getProcessedAverage}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_data_processor_a9277238eccebec12433b58841bc8f19b}{calculateAverage}}(\textcolor{keyword}{const}\ std::vector<double>\&\ vec);}
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_data_processor_af87d3a247b88de5866419c89d533a9c7}{setRawData}}(\textcolor{keyword}{const}\ std::vector<double>\&\ vec);}
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_data_processor_a1642af54e5611bcd6ab539cc455c1dc5}{calculateAverages}}();}
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_data_processor_adc6a06411822b10f7f446e936c866292}{calculateSubsetAverages}}();}
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_data_processor_a6529876c26fd2bc6ab8591a68fa6b5e4}{movingAverageFilter}}();}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00160\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00162\ \ \ \ \ std::vector<double>\ m\_rawData;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ A\ vector\ containing\ the\ raw\ data\ that\ will\ be\ processed\ by\ the\ filter\ and\ averaging\ functions}}
+\DoxyCodeLine{00163\ \ \ \ \ std::vector<double>\ m\_processedData;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ A\ vector\ containing\ the\ processed\ data\ after\ applying\ filters\ or\ transformations\ on\ the\ raw\ data}}
+\DoxyCodeLine{00164\ \ \ \ \ std::vector<double>\ m\_rawSubsetAverageData;\ \ \ \ \ \ \ \textcolor{comment}{//\ A\ vector\ to\ store\ the\ average\ of\ the\ raw\ data\ in\ subsets,\ where\ each\ element\ corresponds\ to\ the\ average\ of\ a\ subset}}
+\DoxyCodeLine{00165\ \ \ \ \ std::vector<double>\ m\_processedSubsetAverageData;\ \textcolor{comment}{//\ A\ vector\ to\ store\ the\ average\ of\ the\ processed\ data\ in\ subsets,\ similar\ to\ m\_rawSubsetAverageData}}
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keywordtype}{double}\ m\_rawAverage;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ The\ average\ value\ of\ the\ raw\ data.\ This\ value\ is\ updated\ after\ processing\ the\ raw\ data}}
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keywordtype}{double}\ m\_processedAverage;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ The\ average\ value\ of\ the\ processed\ data.\ This\ value\ is\ updated\ after\ processing\ the\ raw\ data}}
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keywordtype}{int}\ m\_windowSize;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ The\ size\ of\ the\ moving\ average\ window\ used\ in\ the\ filter.\ Defines\ how\ many\ data\ points\ are\ considered\ for\ calculating\ each\ average}}
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keywordtype}{int}\ m\_subsetSize;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ The\ size\ of\ the\ subsets\ used\ when\ calculating\ the\ subset\ averages.\ Defines\ how\ many\ elements\ are\ grouped\ together\ to\ calculate\ each\ subset\ average}}
+\DoxyCodeLine{00170\ \};}
+\DoxyCodeLine{00171\ }
+
+\end{DoxyCode}

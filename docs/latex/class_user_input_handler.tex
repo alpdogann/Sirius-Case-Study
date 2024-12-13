@@ -1,0 +1,219 @@
+\doxysection{User\+Input\+Handler Class Reference}
+\hypertarget{class_user_input_handler}{}\label{class_user_input_handler}\index{UserInputHandler@{UserInputHandler}}
+
+
+{\ttfamily \#include $<$User\+Input\+Handler.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_user_input_handler_a4ba0246867965ab6c1dab2cd7fd83b7b}{User\+Input\+Handler}} ()
+\item 
+\mbox{\hyperlink{class_user_input_handler_aa32837f673d3a98654aebbe7570fa089}{\texorpdfstring{$\sim$}{\string~}\+User\+Input\+Handler}} ()
+\item 
+int \mbox{\hyperlink{class_user_input_handler_a8145649a7c2089b9ac6d1a16b9bc6ee3}{get\+Num\+Data\+Points}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the number of data points. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_user_input_handler_a24f38b9d2992b4d04e23d961a6abc510}{get\+Data\+Timing\+Period}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the data timing period in milliseconds. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_user_input_handler_ad155ad19c5f0a520dca01011d2030020}{get\+Data\+Timing\+Option}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the selected data timing option. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_user_input_handler_aecad8c07051038db29fd49f39e1c09e2}{get\+Moving\+Average\+Window\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the window size for the moving average filter. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_user_input_handler_a35b25dcc91308099523233a3e6dfe580}{get\+Subset\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the subset size for averaging. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_user_input_handler_a4edb4b48827b30a08cd60c7c22eb2ccd}{get\+Range\+Min}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the minimum value of the data range. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_user_input_handler_a27ac5b07615a013164ec660e4efa438f}{get\+Range\+Max}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the maximum value of the data range. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_user_input_handler_adcbf9ca01cc470c197e679e2434f0af4}{get\+Data\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the selected data type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_user_input_handler_a02b85245e7744b79a310d3e535728322}{get\+Inputs}} ()
+\begin{DoxyCompactList}\small\item\em Prompts the user for an integer input within a specified range. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_user_input_handler_a2493f0194fbace6af1bf1061dfe67c42}{save\+Data\+To\+File}} (const std\+::vector$<$ double $>$ \&raw\+Data, const std\+::vector$<$ double $>$ \&processed\+Data)
+\begin{DoxyCompactList}\small\item\em Prompts the user to save the generated data to a text file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_user_input_handler_a4ba0246867965ab6c1dab2cd7fd83b7b}\index{UserInputHandler@{UserInputHandler}!UserInputHandler@{UserInputHandler}}
+\index{UserInputHandler@{UserInputHandler}!UserInputHandler@{UserInputHandler}}
+\doxysubsubsection{\texorpdfstring{UserInputHandler()}{UserInputHandler()}}
+{\footnotesize\ttfamily \label{class_user_input_handler_a4ba0246867965ab6c1dab2cd7fd83b7b} 
+User\+Input\+Handler\+::\+User\+Input\+Handler (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_user_input_handler_aa32837f673d3a98654aebbe7570fa089}\index{UserInputHandler@{UserInputHandler}!````~UserInputHandler@{\texorpdfstring{$\sim$}{\string~}UserInputHandler}}
+\index{````~UserInputHandler@{\texorpdfstring{$\sim$}{\string~}UserInputHandler}!UserInputHandler@{UserInputHandler}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}UserInputHandler()}{\string~UserInputHandler()}}
+{\footnotesize\ttfamily \label{class_user_input_handler_aa32837f673d3a98654aebbe7570fa089} 
+User\+Input\+Handler\+::\texorpdfstring{$\sim$}{\string~}\+User\+Input\+Handler (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_user_input_handler_ad155ad19c5f0a520dca01011d2030020}\index{UserInputHandler@{UserInputHandler}!getDataTimingOption@{getDataTimingOption}}
+\index{getDataTimingOption@{getDataTimingOption}!UserInputHandler@{UserInputHandler}}
+\doxysubsubsection{\texorpdfstring{getDataTimingOption()}{getDataTimingOption()}}
+{\footnotesize\ttfamily \label{class_user_input_handler_ad155ad19c5f0a520dca01011d2030020} 
+int User\+Input\+Handler\+::get\+Data\+Timing\+Option (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the selected data timing option. 
+
+This function returns the value of {\ttfamily m\+\_\+data\+Timing\+Option}, which represents the user\textquotesingle{}s selection for data timing. It could be options like {\ttfamily e\+Immediate}, {\ttfamily e\+Periodic}, etc.
+
+\begin{DoxyReturn}{Returns}
+The data timing option. 
+\end{DoxyReturn}
+\Hypertarget{class_user_input_handler_a24f38b9d2992b4d04e23d961a6abc510}\index{UserInputHandler@{UserInputHandler}!getDataTimingPeriod@{getDataTimingPeriod}}
+\index{getDataTimingPeriod@{getDataTimingPeriod}!UserInputHandler@{UserInputHandler}}
+\doxysubsubsection{\texorpdfstring{getDataTimingPeriod()}{getDataTimingPeriod()}}
+{\footnotesize\ttfamily \label{class_user_input_handler_a24f38b9d2992b4d04e23d961a6abc510} 
+int User\+Input\+Handler\+::get\+Data\+Timing\+Period (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the data timing period in milliseconds. 
+
+This function returns the value of {\ttfamily m\+\_\+data\+Timing\+Period}, which represents the period (in milliseconds) for data generation timing when the {\ttfamily e\+Periodic} option is selected.
+
+\begin{DoxyReturn}{Returns}
+The data timing period in milliseconds. 
+\end{DoxyReturn}
+\Hypertarget{class_user_input_handler_adcbf9ca01cc470c197e679e2434f0af4}\index{UserInputHandler@{UserInputHandler}!getDataType@{getDataType}}
+\index{getDataType@{getDataType}!UserInputHandler@{UserInputHandler}}
+\doxysubsubsection{\texorpdfstring{getDataType()}{getDataType()}}
+{\footnotesize\ttfamily \label{class_user_input_handler_adcbf9ca01cc470c197e679e2434f0af4} 
+int User\+Input\+Handler\+::get\+Data\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the selected data type. 
+
+This function returns the value of {\ttfamily m\+\_\+data\+Type}, which represents the data type selected by the user (such as {\ttfamily LINEAR}, {\ttfamily SINE}, {\ttfamily RANDOM}, etc.).
+
+\begin{DoxyReturn}{Returns}
+The data type. 
+\end{DoxyReturn}
+\Hypertarget{class_user_input_handler_a02b85245e7744b79a310d3e535728322}\index{UserInputHandler@{UserInputHandler}!getInputs@{getInputs}}
+\index{getInputs@{getInputs}!UserInputHandler@{UserInputHandler}}
+\doxysubsubsection{\texorpdfstring{getInputs()}{getInputs()}}
+{\footnotesize\ttfamily \label{class_user_input_handler_a02b85245e7744b79a310d3e535728322} 
+void User\+Input\+Handler\+::get\+Inputs (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Prompts the user for an integer input within a specified range. 
+
+This function continuously prompts the user for input until a valid integer is entered within the specified range (inclusive). If the user enters invalid input (non-\/integer or out-\/of-\/range values), it will ask the user to try again.
+
+
+\begin{DoxyParams}{Parameters}
+{\em prompt} & The prompt message displayed to the user. \\
+\hline
+{\em min\+Value} & The minimum valid value the user can enter. \\
+\hline
+{\em max\+Value} & The maximum valid value the user can enter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A valid integer within the specified range. 
+\end{DoxyReturn}
+\Hypertarget{class_user_input_handler_aecad8c07051038db29fd49f39e1c09e2}\index{UserInputHandler@{UserInputHandler}!getMovingAverageWindowSize@{getMovingAverageWindowSize}}
+\index{getMovingAverageWindowSize@{getMovingAverageWindowSize}!UserInputHandler@{UserInputHandler}}
+\doxysubsubsection{\texorpdfstring{getMovingAverageWindowSize()}{getMovingAverageWindowSize()}}
+{\footnotesize\ttfamily \label{class_user_input_handler_aecad8c07051038db29fd49f39e1c09e2} 
+int User\+Input\+Handler\+::get\+Moving\+Average\+Window\+Size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the window size for the moving average filter. 
+
+This function returns the value of {\ttfamily m\+\_\+moving\+Average\+Window\+Size}, which defines the size of the moving average window used for filtering the data.
+
+\begin{DoxyReturn}{Returns}
+The size of the moving average window. 
+\end{DoxyReturn}
+\Hypertarget{class_user_input_handler_a8145649a7c2089b9ac6d1a16b9bc6ee3}\index{UserInputHandler@{UserInputHandler}!getNumDataPoints@{getNumDataPoints}}
+\index{getNumDataPoints@{getNumDataPoints}!UserInputHandler@{UserInputHandler}}
+\doxysubsubsection{\texorpdfstring{getNumDataPoints()}{getNumDataPoints()}}
+{\footnotesize\ttfamily \label{class_user_input_handler_a8145649a7c2089b9ac6d1a16b9bc6ee3} 
+int User\+Input\+Handler\+::get\+Num\+Data\+Points (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the number of data points. 
+
+This function returns the value of {\ttfamily m\+\_\+num\+Data\+Points}, which represents the number of data points that the user has specified.
+
+\begin{DoxyReturn}{Returns}
+The number of data points. 
+\end{DoxyReturn}
+\Hypertarget{class_user_input_handler_a27ac5b07615a013164ec660e4efa438f}\index{UserInputHandler@{UserInputHandler}!getRangeMax@{getRangeMax}}
+\index{getRangeMax@{getRangeMax}!UserInputHandler@{UserInputHandler}}
+\doxysubsubsection{\texorpdfstring{getRangeMax()}{getRangeMax()}}
+{\footnotesize\ttfamily \label{class_user_input_handler_a27ac5b07615a013164ec660e4efa438f} 
+int User\+Input\+Handler\+::get\+Range\+Max (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the maximum value of the data range. 
+
+This function returns the value of {\ttfamily m\+\_\+range\+Max}, which represents the maximum value of the data range. This value is used for constraining data generation or processing.
+
+\begin{DoxyReturn}{Returns}
+The maximum value of the data range. 
+\end{DoxyReturn}
+\Hypertarget{class_user_input_handler_a4edb4b48827b30a08cd60c7c22eb2ccd}\index{UserInputHandler@{UserInputHandler}!getRangeMin@{getRangeMin}}
+\index{getRangeMin@{getRangeMin}!UserInputHandler@{UserInputHandler}}
+\doxysubsubsection{\texorpdfstring{getRangeMin()}{getRangeMin()}}
+{\footnotesize\ttfamily \label{class_user_input_handler_a4edb4b48827b30a08cd60c7c22eb2ccd} 
+int User\+Input\+Handler\+::get\+Range\+Min (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the minimum value of the data range. 
+
+This function returns the value of {\ttfamily m\+\_\+range\+Min}, which represents the minimum value of the data range. This value is used for constraining data generation or processing.
+
+\begin{DoxyReturn}{Returns}
+The minimum value of the data range. 
+\end{DoxyReturn}
+\Hypertarget{class_user_input_handler_a35b25dcc91308099523233a3e6dfe580}\index{UserInputHandler@{UserInputHandler}!getSubsetSize@{getSubsetSize}}
+\index{getSubsetSize@{getSubsetSize}!UserInputHandler@{UserInputHandler}}
+\doxysubsubsection{\texorpdfstring{getSubsetSize()}{getSubsetSize()}}
+{\footnotesize\ttfamily \label{class_user_input_handler_a35b25dcc91308099523233a3e6dfe580} 
+int User\+Input\+Handler\+::get\+Subset\+Size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the subset size for averaging. 
+
+This function returns the value of {\ttfamily m\+\_\+subset\+Size}, which specifies the number of elements to include in each subset for subset averaging.
+
+\begin{DoxyReturn}{Returns}
+The size of each subset. 
+\end{DoxyReturn}
+\Hypertarget{class_user_input_handler_a2493f0194fbace6af1bf1061dfe67c42}\index{UserInputHandler@{UserInputHandler}!saveDataToFile@{saveDataToFile}}
+\index{saveDataToFile@{saveDataToFile}!UserInputHandler@{UserInputHandler}}
+\doxysubsubsection{\texorpdfstring{saveDataToFile()}{saveDataToFile()}}
+{\footnotesize\ttfamily \label{class_user_input_handler_a2493f0194fbace6af1bf1061dfe67c42} 
+void User\+Input\+Handler\+::save\+Data\+To\+File (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{raw\+Data}{, }\item[{const std\+::vector$<$ double $>$ \&}]{processed\+Data}{}\end{DoxyParamCaption})}
+
+
+
+Prompts the user to save the generated data to a text file. 
+
+This function asks the user whether they want to save the generated raw and processed data to a text file named {\ttfamily output.\+txt}. If the user confirms, the function writes the raw and processed data to the file. If the file is successfully opened, the data is written with "{}\+Raw Data"{} and "{}\+Processed Data"{} headings, each data point on a new line. If the user declines or the file cannot be opened, appropriate messages are displayed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em raw\+Data} & A vector containing the raw data points. \\
+\hline
+{\em processed\+Data} & A vector containing the processed data points. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Sirius-\/\+Case-\/\+Study/\mbox{\hyperlink{_user_input_handler_8h}{User\+Input\+Handler.\+h}}\end{DoxyCompactItemize}

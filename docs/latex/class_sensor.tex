@@ -1,0 +1,101 @@
+\doxysection{Sensor Class Reference}
+\hypertarget{class_sensor}{}\label{class_sensor}\index{Sensor@{Sensor}}
+
+
+{\ttfamily \#include $<$Sensor.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sensor_aafd6ff11999184f31a61bf950b542017}{Sensor}} (int num\+Data\+Points=10, \mbox{\hyperlink{_sensor_8h_abf38be7f3675ceafafacca8d082aebeb}{Data\+Generation\+Timing}} generation\+Timing=\mbox{\hyperlink{_sensor_8h_abf38be7f3675ceafafacca8d082aebeba6d8a2651a4430d641e121839003e6694}{e\+Immediate}}, int period\+If\+Necessary=100, \mbox{\hyperlink{_sensor_8h_ad8ed01ff3ff33333d8e19db4d2818bb6}{Data\+Type}} data\+Type=\mbox{\hyperlink{_sensor_8h_ad8ed01ff3ff33333d8e19db4d2818bb6adc101ebf31c49c2d4b80b7c6f59f22cb}{LINEAR}}, double range\+Min=-\/100.\+0, double range\+Max=100.\+0)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_sensor}{Sensor} object with configurable parameters. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sensor_aee8c70e7ef05ce65e7ee33686b5d7db2}{\texorpdfstring{$\sim$}{\string~}\+Sensor}} ()
+\item 
+void \mbox{\hyperlink{class_sensor_a6f411e01a361a3d1df1eac8c836e363b}{collect\+And\+Store\+Data\+Points}} ()
+\begin{DoxyCompactList}\small\item\em Collects and stores multiple data points based on the selected generation timing. \end{DoxyCompactList}\item 
+const std\+::vector$<$ double $>$ \& \mbox{\hyperlink{class_sensor_a20b6c35512b253b6fba1f3597581d406}{get\+Data}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the collected sensor data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_sensor_aafd6ff11999184f31a61bf950b542017}\index{Sensor@{Sensor}!Sensor@{Sensor}}
+\index{Sensor@{Sensor}!Sensor@{Sensor}}
+\doxysubsubsection{\texorpdfstring{Sensor()}{Sensor()}}
+{\footnotesize\ttfamily \label{class_sensor_aafd6ff11999184f31a61bf950b542017} 
+Sensor\+::\+Sensor (\begin{DoxyParamCaption}\item[{int}]{num\+Data\+Points}{ = {\ttfamily 10}, }\item[{\mbox{\hyperlink{_sensor_8h_abf38be7f3675ceafafacca8d082aebeb}{Data\+Generation\+Timing}}}]{generation\+Timing}{ = {\ttfamily \mbox{\hyperlink{_sensor_8h_abf38be7f3675ceafafacca8d082aebeba6d8a2651a4430d641e121839003e6694}{e\+Immediate}}}, }\item[{int}]{period\+If\+Necessary}{ = {\ttfamily 100}, }\item[{\mbox{\hyperlink{_sensor_8h_ad8ed01ff3ff33333d8e19db4d2818bb6}{Data\+Type}}}]{data\+Type}{ = {\ttfamily \mbox{\hyperlink{_sensor_8h_ad8ed01ff3ff33333d8e19db4d2818bb6adc101ebf31c49c2d4b80b7c6f59f22cb}{LINEAR}}}, }\item[{double}]{range\+Min}{ = {\ttfamily -\/100.0}, }\item[{double}]{range\+Max}{ = {\ttfamily 100.0}}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_sensor}{Sensor} object with configurable parameters. 
+
+Initializes the \doxylink{class_sensor}{Sensor} with user-\/defined or default values for data generation. The parameters include the number of data points to generate, timing settings, data type, and the range of values.
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+Data\+Points} & The number of data points to generate (default\+: 10). \\
+\hline
+{\em generation\+Timing} & The timing mode for data generation (default\+: e\+Immediate).
+\begin{DoxyItemize}
+\item e\+Immediate\+: No delay between data points.
+\item e\+Periodic\+: Fixed delay specified by {\ttfamily period\+If\+Necessary}.
+\item e\+Async\+: Random delay between 100-\/300 milliseconds. 
+\end{DoxyItemize}\\
+\hline
+{\em period\+If\+Necessary} & The period for periodic data generation in milliseconds (default\+: 100). Used only when {\ttfamily generation\+Timing} is e\+Periodic. \\
+\hline
+{\em data\+Type} & The type of data to generate (default\+: LINEAR).
+\begin{DoxyItemize}
+\item LINEAR\+: Linearly spaced data.
+\item SINE\+: Sinusoidal data.
+\item RANDOM\+: Random data within the range. 
+\end{DoxyItemize}\\
+\hline
+{\em range\+Min} & The minimum value of the data range (default\+: -\/100.\+0). \\
+\hline
+{\em range\+Max} & The maximum value of the data range (default\+: 100.\+0). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_sensor_aee8c70e7ef05ce65e7ee33686b5d7db2}\index{Sensor@{Sensor}!````~Sensor@{\texorpdfstring{$\sim$}{\string~}Sensor}}
+\index{````~Sensor@{\texorpdfstring{$\sim$}{\string~}Sensor}!Sensor@{Sensor}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Sensor()}{\string~Sensor()}}
+{\footnotesize\ttfamily \label{class_sensor_aee8c70e7ef05ce65e7ee33686b5d7db2} 
+Sensor\+::\texorpdfstring{$\sim$}{\string~}\+Sensor (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_sensor_a6f411e01a361a3d1df1eac8c836e363b}\index{Sensor@{Sensor}!collectAndStoreDataPoints@{collectAndStoreDataPoints}}
+\index{collectAndStoreDataPoints@{collectAndStoreDataPoints}!Sensor@{Sensor}}
+\doxysubsubsection{\texorpdfstring{collectAndStoreDataPoints()}{collectAndStoreDataPoints()}}
+{\footnotesize\ttfamily \label{class_sensor_a6f411e01a361a3d1df1eac8c836e363b} 
+void Sensor\+::collect\+And\+Store\+Data\+Points (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Collects and stores multiple data points based on the selected generation timing. 
+
+This method generates and stores {\ttfamily m\+\_\+num\+Of\+Data\+Points} data points into {\ttfamily m\+\_\+physical\+Data} using the timing specified by {\ttfamily m\+\_\+generation\+Timing}\+:
+\begin{DoxyItemize}
+\item {\bfseries{e\+Immediate}}\+: Generates all data points as quickly as possible without delay.
+\item {\bfseries{e\+Periodic}}\+: Generates data points with a fixed delay ({\ttfamily m\+\_\+period\+For\+Generation}) between each point.
+\item {\bfseries{e\+Async}}\+: Generates data points with a random delay between 100 and 300 milliseconds.
+\end{DoxyItemize}
+
+Additionally, a message "{}\+Data Generated"{} is printed to the console for each point. \Hypertarget{class_sensor_a20b6c35512b253b6fba1f3597581d406}\index{Sensor@{Sensor}!getData@{getData}}
+\index{getData@{getData}!Sensor@{Sensor}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily \label{class_sensor_a20b6c35512b253b6fba1f3597581d406} 
+const std\+::vector$<$ double $>$ \& Sensor\+::get\+Data (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the collected sensor data. 
+
+\begin{DoxyReturn}{Returns}
+A constant reference to the vector containing the collected data points. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Sirius-\/\+Case-\/\+Study/\mbox{\hyperlink{_sensor_8h}{Sensor.\+h}}\end{DoxyCompactItemize}
