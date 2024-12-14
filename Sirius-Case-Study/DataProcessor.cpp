@@ -147,7 +147,7 @@ void DataProcessor::movingAverageFilter()
 	int index = 0;
 	double dScaler = 1.0 / (double)m_windowSize; // Scaling factor to normalize the sum to get the average
 	
-	std::vector<double> tempVec(m_rawData.size() + m_windowSize); // Temporary vector to store padded data (to handle edge cases)
+	std::vector<double> tempVec(m_rawData.size() + m_windowSize - 1); // Temporary vector to store padded data (to handle edge cases)
 
 	// Add padding at the beginning of tempVec using the first value of m_rawData
 	for (int i = 0; i < offset; i++)
@@ -162,7 +162,7 @@ void DataProcessor::movingAverageFilter()
 	}
 
 	// Add padding at the end of tempVec using the last value of m_rawData
-	for (int i = 0; i <= offset; i++)
+	for (int i = 0; i < offset; i++)
 	{
 		tempVec[index++] = m_rawData.back();
 	}

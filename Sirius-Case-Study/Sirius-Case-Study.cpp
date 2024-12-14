@@ -60,6 +60,7 @@ int main()
 
 	std::cout << "-----------------------------------------------------------------\n";
 
+	inputHandler->saveDataToFile(dp->getRawData(), dp->getProcessedData());
 
     std::cin.get();
 }
